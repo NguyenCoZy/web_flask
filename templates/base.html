@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quản lý xe hơi</title>
+</head>
+<body>
+    <h1>Hệ thống quản lý xe hơi</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Trang chủ</a> |
+        <a href="{{ url_for('add_car') }}">Thêm xe</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

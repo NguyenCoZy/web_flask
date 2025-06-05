@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Thêm xe mới</h2>
+<form method="post">
+    Hãng xe: <input type="text" name="brand" required><br>
+    Dòng xe: <input type="text" name="model" required><br>
+    Năm sản xuất: <input type="number" name="year" required><br>
+    <input type="submit" value="Thêm xe">
+</form>
+{% endblock %}
