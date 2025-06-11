@@ -1,16 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Danh sách xe</h2>
-<table border="1">
-    <tr><th>ID</th><th>Hãng</th><th>Dòng</th><th>Năm</th><th>Hành động</th></tr>
+<h2>Danh sách các mẫu xe nổi bật</h2>
+<div class="car-list">
     {% for car in cars %}
-    <tr>
-        <td>{{ car["id"] }}</td>
-        <td>{{ car["brand"] }}</td>
-        <td>{{ car["model"] }}</td>
-        <td>{{ car["year"] }}</td>
-        <td><a href="{{ url_for('delete_car', car_id=car["id"]) }}">Xóa</a></td>
-    </tr>
+    <div class="car-card">
+        <h3>{{ car.brand }} {{ car.model }}</h3>
+        <p>Năm sản xuất: {{ car.year }}</p>
+    </div>
     {% endfor %}
-</table>
+</div>
 {% endblock %}
