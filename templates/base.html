@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>Quản lý xe hơi</title>
+    <meta charset="UTF-8">
+    <title>Giới thiệu xe hơi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Hệ thống quản lý xe hơi</h1>
-    <nav>
-        <a href="{{ url_for('index') }}">Trang chủ</a> |
-        <a href="{{ url_for('add_car') }}">Thêm xe</a>
-    </nav>
-    <hr>
-    {% block content %}{% endblock %}
+    <header>
+        <h1>Trang giới thiệu xe hơi</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Trang chủ</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Giới thiệu xe hơi. All rights reserved.</p>
+    </footer>
 </body>
 </html>
